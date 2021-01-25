@@ -12,7 +12,7 @@ RUN if [ "$(uname -m)" = "ppc64le" ] || [ "$(uname -m)" = "aarch64" ]; then \
     chmod +x /bin/grpc_health_probe; \
     fi
 
-FROM python:3.7-slim-buster
+FROM python:3.9.1
 
 ENV TARGET_DIR /opt/katib
 ENV SUGGESTION_DIR cmd/suggestion/nas/enas/v1beta1
