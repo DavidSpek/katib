@@ -1,4 +1,4 @@
-FROM node:12.18.1 AS npm-build
+FROM node:15.6.0 AS npm-build
 
 ADD /pkg/ui/v1beta1/frontend /frontend
 RUN cd /frontend && npm ci
