@@ -14,7 +14,7 @@ RUN if [ "$(uname -m)" = "ppc64le" ]; then \
     CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o katib-controller  ./v1beta1; \
     fi
 # Copy the controller-manager into a thin image
-FROM alpine:3.7
+FROM alpine:3.13.1
 WORKDIR /app
 RUN apk update && apk add ca-certificates
 COPY --from=build-env /go/src/github.com/kubeflow/katib/cmd/katib-controller/katib-controller .
