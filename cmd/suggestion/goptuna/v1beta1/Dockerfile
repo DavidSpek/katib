@@ -19,7 +19,7 @@ RUN GRPC_HEALTH_PROBE_VERSION=v0.3.1 && \
     fi && \
     chmod +x /bin/grpc_health_probe
 
-FROM alpine:3.7
+FROM alpine:3.13.2
 
 ENV TARGET_DIR /opt/katib
 
