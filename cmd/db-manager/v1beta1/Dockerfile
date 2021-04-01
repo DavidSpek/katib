@@ -18,7 +18,7 @@ RUN GRPC_HEALTH_PROBE_VERSION=v0.3.1 && \
     fi && \
     chmod +x /bin/grpc_health_probe
 
-FROM alpine:3.7
+FROM alpine:3.13.4
 WORKDIR /app
 COPY --from=build-env /bin/grpc_health_probe /bin/
 COPY --from=build-env /go/src/github.com/kubeflow/katib/cmd/db-manager/katib-db-manager /app/
