@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.9.5
 
 ENV TARGET_DIR /opt/katib
 ENV SUGGESTION_DIR cmd/suggestion/chocolate/v1beta1
