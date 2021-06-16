@@ -16,7 +16,7 @@ RUN if [ "$(uname -m)" = "ppc64le" ] || [ "$(uname -m)" = "aarch64" ]; then \
     go build -o katib-ui ./v1beta1; \
     fi
 
-FROM alpine:3.7
+FROM alpine:3.14.0
 WORKDIR /app
 # v1beta1 source code
 COPY --from=go-build /go/src/github.com/kubeflow/katib/cmd/ui/katib-ui /app/
