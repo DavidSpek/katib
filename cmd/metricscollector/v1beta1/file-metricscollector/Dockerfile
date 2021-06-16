@@ -16,7 +16,7 @@ RUN if [ "$(uname -m)" = "ppc64le" ]; then \
     fi
 
 # Copy the controller-manager into a thin image
-FROM alpine:3.7
+FROM alpine:3.14.0
 WORKDIR /app
 COPY --from=build-env /go/src/github.com/kubeflow/katib/cmd/metricscollector/v1beta1/file-metricscollector/file-metricscollector .
 ENTRYPOINT ["./file-metricscollector"]
